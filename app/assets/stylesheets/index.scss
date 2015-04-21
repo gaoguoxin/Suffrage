@@ -25,14 +25,16 @@
 }
 
 html, body {
-  height:100%;
-  &.home{
-	overflow:hidden;
-  }
+ //  height:100%;
+ //  &.home{
+	// overflow:hidden;
+ //  }
   &.mobile{
     background:#132634;
     font-family: "Microsoft YaHei" !important;
     .index{
+    	height:100%;
+    	overflow:hidden;
     	position:relative;
     	padding-right:0px;
     	padding-left:0px;

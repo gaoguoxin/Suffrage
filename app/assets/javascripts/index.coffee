@@ -10,13 +10,13 @@ $(->
 		row.animate({top:'0px'},500)
 		$.each(row.siblings('.row'),(k,v)->
 			if hig <= 480
-				top = 373 + k * 20
+				top = 373 + k * 10
 			else if hig <= 568
 				top = 373 + k * 30
 			else if hig <= 667
-				top = 503 + k * 30
+				top = 503 + k * 20
 			else if hig <= 736
-				top = 553 + k * 40
+				top = 553 + k * 20
 			$(this).animate({top:top + 'px'},500)
 		)
 	)
