@@ -21,7 +21,7 @@ class MaterialUploader < CarrierWave::Uploader::Base
     "#{p[0,3]}/#{p[3,3]}/#{p[6,3]}"
   end  
 
-  process resize_to_fit: [132, 94]
+  process resize_to_fill: [132, 94]
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
