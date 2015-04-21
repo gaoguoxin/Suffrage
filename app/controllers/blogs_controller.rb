@@ -11,9 +11,13 @@ class BlogsController < ApplicationController
 	end
 
 	def create 
-		Blog.create(blog_params)
-		Rails.logger.info blog_params.inspect
-		Rails.logger.info '=============================================='
+		blog = Blog.nwe(blog_params)
+		if blog.save
+			Rails.logger.info '----------保存成功-----------------------------'
+		else
+			Rails.logger.info blog_params.inspect
+			Rails.logger.info '=============================================='
+		end
 		redirect_to blogs_url
 	end
 
