@@ -25,9 +25,9 @@
 }
 
 html, body {
-  // height:100%;
+  height:100%;
   &.home{
-	height:480px;
+	overflow:hidden;
   }
   &.mobile{
     background:#132634;
