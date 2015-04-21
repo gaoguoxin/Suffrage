@@ -12,6 +12,8 @@ class BlogsController < ApplicationController
 
 	def create 
 		Blog.create(blog_params)
+		Rails.logger.info blog_params.inspect
+		Rails.logger.info '=============================================='
 		redirect_to blogs_url
 	end
 
