@@ -77,7 +77,10 @@ $(->
 								content:cont
 							},(ret)->
 								if ret.success
-									window.location.href = '/'
+									$('.regist-modal').modal()
+									$('.regist-modal').on('hidden.bs.modal',->
+										window.location.href = '/'
+									)
 								else
 									$('.modal span.mobile').text(mobi)
 									$('.modal').modal()
