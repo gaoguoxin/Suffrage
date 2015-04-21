@@ -25,9 +25,9 @@
 }
 
 html, body {
+  height:100%;
   &.home{
 	overflow-y:hidden;
-  	height:100%;
   }
   &.mobile{
     background:#132634;
