@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
 	end
 
 	def create 
-		blog = Blog.nwe(blog_params)
+		blog = Blog.new(blog_params)
 		if blog.save
 			Rails.logger.info '----------保存成功-----------------------------'
 		else
