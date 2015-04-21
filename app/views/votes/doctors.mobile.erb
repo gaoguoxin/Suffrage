@@ -1,10 +1,10 @@
 <div class="container-fluid doctors">
-	<div class="row">
-		<div class="col-xs-12 title">
+	<div class="list-content">
+	<div class="row title">
+		<div class="col-xs-12">
 			<span>投票转区</span>			
 		</div>
-	</div>
-	<div class="list-content">
+	</div>	
  		<% @doctors.each do |doctor|%>
 			<div class="row ">
 				<div class="col-xs-3"><%= image_tag(doctor.avatar_url,:class => 'img-responsive')%></div>
