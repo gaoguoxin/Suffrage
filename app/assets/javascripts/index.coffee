@@ -24,7 +24,7 @@ $(->
 				else if hig <= 736
 					top = 553 + k * 20
 				origin = $(this).css('top')
-				$(this).attr('origin',origin).addClass('cuttle').animate({top:top + 'px'},500)
+				$(this).attr('origin',origin).removeClass('active').addClass('cuttle').animate({top:top + 'px'},500)
 			)
 	)
 
