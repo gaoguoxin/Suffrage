@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Suffrage</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class='desktop'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/admin">投票系统管理后台</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= current?(controller_name,'blogs')%>"><a href="/blogs">新闻资讯</a></li>
+            <li class="<%= current?(controller_name,'users')%>"><a href="/users">用户管理</a></li>
+            <li class="<%= current?(controller_name,'doctors')%>"><a href="/doctors">投票统计</a></li>
+            <li><a href="/logout">退出<i class="fa fa-sign-out"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>  
+    <%= yield %>
+  </body>
+</html>

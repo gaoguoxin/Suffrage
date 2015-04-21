@@ -1,0 +1,45 @@
+    <div class="container-fluid users">
+      <div class="row">
+        <div class="col-xs-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/users">用户列表</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th>城市</th>
+                  <th>单位</th>
+                  <th>职称</th>
+                  <th>手机</th>
+                  <th>邮箱</th>
+                  <th>病例摘要</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% if @users.length > 0 %>
+              <% @users.each do |user|%>
+                <tr>
+                  <td><%= user.name %></td>
+                  <td><%= user.city %></td>
+                  <td><%= user.company %></td>
+                  <td><%= user.position %></td>
+                  <td><%= user.mobile %></td>
+                  <td><%= user.email %></td>
+                  <td><a href="javascript:void(0);" info="<%= user.content %>">查看病例</a></td>
+                </tr>                
+              <% end %>
+              <% else %>
+                <tr>
+                  <td colspan="7" align='center'>还未收集到任何用户信息</td>
+                </tr>              
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

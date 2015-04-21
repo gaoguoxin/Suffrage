@@ -1,0 +1,47 @@
+    <div class="container-fluid blogs">
+      <div class="row">
+        <div class="col-xs-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/blogs">资讯列表</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th width='20%'>图片</th>
+                  <th width='40%'>标题</th>
+                  <th width='10%'>类型</th>
+                  <th width='10%'>创建时间</th>
+                  <th width='20%'>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+              <% if @blogs.length > 0 %>
+              <% @blogs.each do |blog|%>
+                <tr>
+                  <td><%= image_tag(blog.image_url,:width => 60) %></td>
+                  <td><%= blog.name %></td>
+                  <td><%= blog.show_type %></td>
+                  <td><%= blog.created_at.strftime('%F')%></td>
+                  <td><a href="/blogs/<%= blog.id.to_s%>/edit" class="btn btn-success">修改</a><%= link_to '删除', "/blogs/#{blog.id.to_s}", method: :delete,:class => 'btn btn-danger', data: { confirm: '确定要删除么?' } %></td>
+                </tr>  
+              <% end %>
+              <% else %>
+                <tr>
+                  <td colspan="4" align='center'>您还没有添加任何新闻资讯</td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <%= paginate @blogs %>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <a href="/blogs/new" class="btn btn-info pull-right">新建资讯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

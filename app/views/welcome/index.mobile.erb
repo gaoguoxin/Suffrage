@@ -1,0 +1,125 @@
+<div class="container-fluid index">
+	<div class="row introduce">
+		<div class="col-xs-12 title">
+			<%= image_tag('intro.png',:width => 20)%>
+			<span>项目介绍</span>
+		</div>
+		<div class="col-xs-12 content">
+			冠状动脉痉挛（ Coronary Artery Spasm ,CAS）是一种病理生理状态，因发生痉挛的部位、严重程度以及有无侧枝循环等的差异而表现为不同的临床类型。国内报道在静息性胸痛且冠脉造影狭窄＜50%的小样本人群中行乙酰胆碱激发试验，阳性率为75%。有关冠状动脉痉挛综合征的研究尚浅，目前关于CASS是的病因和发病机制尚不清楚，但鉴于高血压可诱发冠状动脉痉挛，导致冠脉供应心肌的血液受阻，因此血压控制在CASS防治中的作用不可忽视.此外，在临床实践中相关指南等指导文件也非常匮乏。为推动CASS疾病的规范化诊疗，提高广大心血管临床医生对这个病种的关注和诊疗能力，由中华医学会心血管病学分会主任委员、北京大学第一医院霍勇教授牵头制定《冠状动脉痉挛综合征诊断与治疗》中国专家共识现已定稿，即将发布。
+      为大力推动CASS疾病规范化诊疗，由北京高血压防治协会主办、中华医学会心血管病学分会支持
+		</div>
+	</div>
+	<div class="row rules">
+		<div class="col-xs-12 title">
+			<%= image_tag('rule.png',:width => 20)%>
+			<span>赛制及评分标准</span>
+		</div>
+		<div class="col-xs-12 content">
+			<div class="row">
+				<div class="col-xs-12">
+					<h4><span>1</span>城市选拔赛：</h4>
+					<p>每场比赛：5名选手晋级1名</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4><span>2</span>复活赛：</h4>
+					<p>微信投票及专家评选</p>
+					<p>（35名晋级7名）</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4><span>3</span>区域比赛：</h4>
+					<p>6名选手晋级1名</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<h4><span>4</span>总决赛：</h4>
+					<p>角逐前三甲、最佳病例、最具风采等奖项</p>
+				</div>
+			</div>
+			<div class="row table-container">
+				<div class="col-xs-12">
+					<%= image_tag('table.png',:class => 'img-responsive tb')%>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="row new">
+		<div class="col-xs-12 title">
+			<%= image_tag('new.png',:width => 20)%>
+			<span>新闻资讯</span>
+		</div>
+		<div class="col-xs-12 content">
+			<ul class="list-group row ">
+				<li class="list-group-item col-xs-12">
+					<a href="/news?type=1">
+						<span class="list-info">
+							<%= image_tag('n1.png',:class => 'img-circle circle',:size => '55x55')%>
+							<span class="bread pull-right"><span class="txt">热点资讯</span><span class="icon"></span><%= image_tag('right.png',:class => 'img-circle circle',:size => '30x30')%></span>
+						</span>						
+					</a>
+				</li>
+				<li class="list-group-item col-xs-12">
+					<a href="/news?type=2">
+						<span class="list-info">
+							<%= image_tag('n2.png',:class => 'img-circle circle',:size => '55x55')%>
+							<span class="bread pull-right"><span class="txt">比赛预告</span><span class="icon"></span><%= image_tag('right.png',:class => 'img-circle circle',:size => '30x30')%></span>
+						</span>						
+					</a>
+				</li>
+				<li class="list-group-item col-xs-12">
+					<a href="/news?type=3">
+						<span class="list-info">
+							<%= image_tag('n3.png',:class => 'img-circle circle',:size => '55x55')%>
+							<span class="bread pull-right"><span class="txt">精彩回顾</span><span class="icon"></span><%= image_tag('right.png',:class => 'img-circle circle',:size => '30x30')%></span>
+						</span>						
+					</a>
+				</li>
+			</ul>					
+		</div>		
+	</div>			
+	<div class="row regist">
+		<div class="col-xs-12 title">
+			<%= image_tag('reg.png',:width => 20)%>
+			<span>报名注册</span>
+		</div>
+		<div class="col-xs-12 content">
+			<div class="row">
+				<div class="col-xs-4 col-xs-offset-4">
+					<%= image_tag('reg-avt.png',:class => 'img-responsive')%>
+				</div>
+				<div class="col-xs-8 col-xs-offset-2">
+					<a href="/votes" class="btn btn-default btn-block">点此进入报名注册</a>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<div class="row votes">
+		<div class="col-xs-12 title">
+			<%= image_tag('vt.png',:width => 20)%>
+			<span>投票专区</span>
+		</div>
+		<div class="col-xs-12 content">
+			<div class="row">
+				<div class="col-xs-4 col-xs-offset-4">
+					<%= image_tag('vot.png',:class => 'img-responsive')%>
+				</div>
+				<div class="col-xs-8 col-xs-offset-2">
+					<a href="/votes/doctors" class="btn btn-default btn-block">点此进入投票专区</a>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="modal fade rule-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<%= image_tag('table.png',:class => 'img-responsive tb')%>
+				</div>
+			</div>
+		</div>
+	</div>							
+</div>

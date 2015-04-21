@@ -1,0 +1,90 @@
+<div class="container-fluid users">
+	<div class="row">
+		<%= image_tag('title.png',:class => 'img-responsive')%>
+		<div class="col-xs-12">
+			<form class="form-horizontal">
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">姓名</label>
+			    <div class="col-sm-10">
+			      <input type="text" name='name' class="form-control input-lg">
+			      <input type="hidden" name='province' class="">
+			      <input type="hidden" name='city' class="">
+			      <input type="hidden" name='area' class="">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">请选择所在省份</label>
+			    <div class="col-sm-10">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block" data-toggle="dropdown" aria-expanded="false"><span id="province">请选择所在省</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu province" role="menu"></ul>
+					</div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">请选择所在市</label>
+			    <div class="col-sm-10">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block" data-toggle="dropdown" aria-expanded="false"><span id="city">请选择所在市</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu city" role="menu"></ul>
+					</div>
+			    </div>
+			  </div>	
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">请选择所在区县</label>
+			    <div class="col-sm-10">
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default dropdown-toggle btn-lg btn-block" data-toggle="dropdown" aria-expanded="false"><span id="area">请选择所在区县</span><span class="caret"></span></button>
+					  <ul class="dropdown-menu area" role="menu"></ul>
+					</div>
+			    </div>
+			  </div>				  		  
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">单位</label>
+			    <div class="col-sm-10">
+			      <input type="text" name='company' class="form-control input-lg">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">职称</label>
+			    <div class="col-sm-10">
+			      <input type="text" name='position' class="form-control input-lg">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">手机号</label>
+			    <div class="col-sm-10">
+			      <input type="text" name='mobile' class="form-control input-lg">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="col-sm-2 control-label">病例摘要</label>
+			    <div class="col-sm-10">
+			      <textarea class="form-control" rows="3" name="content"></textarea>
+			    </div>
+			  </div>				  			  			  			  
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <a href="javascript:void(0);" class="btn btn-default btn-block btn-lg">提交</a>
+			    </div>
+			  </div>
+			</form>			
+		</div>
+	</div>
+	<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-center" id="gridSystemModalLabel">该用户已经注册!</h4>
+				</div>
+				<div class="modal-body">
+				  <div class="container-fluid">
+				    <div class="row">
+				      <div class="col-xs-12 text-center">手机号:<span class='mobile' style='color:red;'></span>已经注册</div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>		
+</div>

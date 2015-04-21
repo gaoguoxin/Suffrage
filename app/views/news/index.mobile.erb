@@ -1,0 +1,25 @@
+<div class="container-fluid news">
+	<div class="row">
+		<div class="col-xs-12 title">
+			<ul class='list-inline'>
+				<li class='col-xs-4 text-center <%= current?(params[:type],1)%>'><a href="/news">热点资讯</a></li>
+				<li class='col-xs-4 text-center <%= current?(params[:type],2)%>'><a href="/news?type=2">比赛预告</a></li>
+				<li class='col-xs-4 text-center <%= current?(params[:type],3)%>'><a href="/news?type=3">精彩回顾</a></li>
+			</ul>				
+		</div>
+	</div>
+	<div class="list-content">
+		<% @blogs.each do |blog|%>
+			<div class="row ">
+				<a href="/news/<%= blog.id.to_s%>">
+					<div class="col-xs-4"><%= image_tag(blog.image_url,:class => 'img-responsive')%></div>
+					<div class="col-xs-8">
+						<p class='name'><%= truncate(blog.name,:length => 12)%></p>
+						<p class='time'>时间：<%= blog.created_at.strftime('%F')%></p>
+						<p class="source">来源：<%= blog.source%></p>
+					</div>				
+				</a>		
+			</div>	
+		<% end %>											
+	</div>						
+</div>

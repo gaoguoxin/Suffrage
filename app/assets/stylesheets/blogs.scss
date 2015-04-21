@@ -1,0 +1,17 @@
+body.desktop{
+	.blogs,.doctors{
+		table{
+			tr{
+				td{
+					vertical-align:middle;
+				}
+			}
+		}
+		.btn{
+			color:#fff;
+			&.dropdown-toggle{
+				color:#333333;
+			}
+		}
+	}
+}

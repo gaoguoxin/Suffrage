@@ -1,0 +1,16 @@
+<div class="container-fluid news_detail">
+	<div class="row title">
+		<div class="col-xs-12">
+			<h4><%= @blog.name %></h4>
+			<%= image_tag('tag.png',:size => '30x30')%>
+		</div>
+	</div>
+	<div class="row source">
+		<div class="col-xs-12">时间：<%= @blog.created_at.strftime('%F')%> 来源：<%= @blog.source%></div>
+	</div>
+	<div class="row content">
+		<div class="col-xs-12">
+			<%= raw @blog.content%>		
+		</div>
+	</div>					
+</div>

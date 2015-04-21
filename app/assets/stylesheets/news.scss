@@ -1,0 +1,140 @@
+@import "compass/utilities/general/clearfix";
+html, body {
+  height: 100%;
+  &.mobile{
+    background:#132634;
+    .news{
+      font-family: "Microsoft YaHei" !important;
+      >.row{
+        margin:0px;
+        background:#fff;
+        .title{
+          font-size:18px;
+          font-weight:bold;
+          padding-left:0px;
+          padding-right:0px;
+          ul.list-inline{
+            margin-left:0px;
+            li{
+              padding-top:10px;
+              padding-bottom:10px;              
+              border-bottom:2px solid #bbbbbb;
+              a{
+                color:#5c5c5c;
+                text-decoration: none;
+              }
+              &.active{
+                border-bottom:2px solid #e26907;
+                a{
+                  color:#db4b04;
+                }
+              }
+            }
+          }
+        }
+        &:first-child{
+          border-top-left-radius:6px;
+          border-top-right-radius:6px;
+        }
+      }
+      .list-content{
+        border-bottom-left-radius:6px;
+        border-bottom-right-radius:6px; 
+        min-height:408px;
+        @include clearfix;
+        background:#fff;
+        .row{
+          margin:0px;
+          padding-top:10px;
+          padding-bottom:10px;
+          border-bottom:1px dashed #aaaaaa;
+          a{
+            display:block;
+            @include clearfix;
+          }          
+          .col-xs-4{
+            padding-right:0px;
+          }
+          .col-xs-8{
+            p{
+              &.name{
+                color:#000000;
+                font-size:16px;
+              }
+              &.time,&.source{
+                color:#8b8b8b;
+              }
+            }
+            @media screen and (max-width: 414px) {
+              p{
+                margin:0px 0px 6px 0px;
+              }
+            }
+            @media screen and (max-width: 375px) {
+              p{
+                margin:0px 0px 4px 0px;
+              }
+            }
+            @media screen and (max-width: 320px) {
+              p{
+                margin:0px 0px 2px 0px;
+              }
+            }                        
+          }
+          @media screen and (max-width:320px) {
+            .col-xs-8{
+              margin-top:-4px;  
+            }
+            
+          }
+        } 
+      }
+      padding-top:10px;
+      padding-bottom:15px;    
+    }
+    .news_detail{
+      font-family: "Microsoft YaHei" !important;
+      padding-top: 10px;
+      padding-bottom: 15px;      
+      >.row{
+        background:#fff;
+        margin:0px;  
+        &:first-child{
+          border-top-left-radius:6px;
+          border-top-right-radius:6px;          
+        }
+        &:last-child{
+          border-bottom-left-radius:6px;
+          border-bottom-right-radius:6px;            
+        }
+      }
+      
+      .title{
+        .col-xs-12{
+          position:relative;
+          color:#000000;
+          border-bottom:1px dashed #aaaaaa;
+        }
+        img{
+          position:absolute;
+          top:0px;
+          right:0px;
+        }
+      }
+      .source{
+        padding-top:10px;
+        padding-bottom:10px;
+        border-bottom:1px dashed #aaaaaa;
+      }
+      .content{
+        padding-top:10px;
+        min-height:376px;
+        p{
+          img{
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="container-fluid doctors">
+	<div class="row">
+		<div class="col-xs-12 title">
+			<span>投票转区</span>			
+		</div>
+	</div>
+	<div class="list-content">
+ 		<% @doctors.each do |doctor|%>
+			<div class="row ">
+				<div class="col-xs-3"><%= image_tag(doctor.avatar_url,:class => 'img-responsive')%></div>
+				<div class="col-xs-6">
+					<span class="name"><%= doctor.name %></span>
+					<span class='hospital'><%= truncate(doctor.hospital,:length => 11)%></span>
+					<span class="office">所在科室：<%= truncate(doctor.office,:length => 6) %></span>
+					<span class="position">病例名称：<%= truncate(doctor.position,:length => 7) %></span>
+				</div>
+				<span class="col-xs-3 vote">
+					<%= image_tag("vote.png",:class => 'img-responsive')%>
+					<span class="count"><%= doctor.point %></span>
+					<a class="show" href='/votes/<%= doctor.id.to_s %>'></a>
+					<a class="svote" href='javascript:void(0);' id='<%= doctor.id.to_s %>'></a>
+				</span>						
+			</div>	
+		<% end %>									
+	</div>	
+
+	<div class="modal fade vote-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-center" id="gridSystemModalLabel">投票失败!</h4>
+				</div>
+				<div class="modal-body">
+				  <div class="container-fluid">
+				    <div class="row">
+				      <div class="col-xs-12 text-center"><span class='mobile notice' style='color:red;'></span></div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+</div>

@@ -1,0 +1,54 @@
+    <div class="container-fluid doctors">
+      <div class="row">
+        <div class="col-xs-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/doctors">投票信息统计</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>头像</th>
+                  <th>姓名</th>
+                  <th>医院</th>
+                  <th>科室</th>
+                  <th>职称</th>
+                  <th>票数</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if @doctors.length > 0 %>
+                <% @doctors.each do |doc|%>
+                  <tr>
+                    <td><%= image_tag(doc.avatar_url,:width => 60) %></td>
+                    <td><%= doc.name %></td>
+                    <td><%= doc.hospital %></td>
+                    <td><%= doc.office %></td>
+                    <td><%= doc.position %></td>
+                    <td><%= doc.point %></td>
+                    <td>
+                      <a href="/doctors/<%= doc.id.to_s%>/edit" class="btn btn-success">修改</a>
+                      <%= link_to '删除', "/doctors/#{doc.id.to_s}", method: :delete,:class => 'btn btn-danger', data: { confirm: '确定要删除么?' } %>
+                    </td>
+                  </tr>
+                  <% end %>
+                <% else %>
+                  <tr>
+                    <td colspan="6" align='center'>还未添加任何医生</td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+            <%= paginate @doctors %>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <a href="/doctors/new" class="btn btn-info pull-right">添加医生</a>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
