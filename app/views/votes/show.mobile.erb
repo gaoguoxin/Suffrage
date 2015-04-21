@@ -8,7 +8,7 @@
 			<span class="hospital"><%= @doctor.hospital %></span>
 			<span class="office">所在科室：<%= @doctor.office %></span>
 			<span class="office">病例名称：<%= @doctor.position %></span>
-			<span class="vote">当前票数：<span class='count'>1280</span></span>
+			<span class="vote">当前票数：<span class='count'>1280<%= @doctor.point %></span></span>
 		</div>
 		<div class="col-xs-12 middle">
 			<a href="javascript:void(0);" class="btn btn-block btn-lg" id="<%= @doctor.id.to_s %>">给TA投票</a>
@@ -35,5 +35,20 @@
 			</div>
 		</div>
 	</div>	
-
+	<div class="modal fade vote-modal" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title text-center" id="gridSystemModalLabel">投票失败!</h4>
+				</div>
+				<div class="modal-body">
+				  <div class="container-fluid">
+				    <div class="row">
+				      <div class="col-xs-12 text-center"><span class='mobile notice' style='color:red;'></span></div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
