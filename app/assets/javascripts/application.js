@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require nprogress
@@ -19,4 +18,3 @@
 //= require fingerprint 
 //= require ckeditor/init
 //= require_tree .
-//= require turbolinks

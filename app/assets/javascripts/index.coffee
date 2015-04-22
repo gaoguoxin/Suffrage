@@ -1,4 +1,11 @@
 $(->
+	$(window).on('navigate',(e,d)->
+		direct = d.state.direction
+		if direct == 'back'
+			console.log '----back-------'
+		if direct == 'forward'
+			console.log '----forward-------'
+	)
 	$('.mobile .rules .content img.tb').click(->
 		$('.rule-modal').modal()
 	)
