@@ -6,7 +6,7 @@
 		</div>
 	</div>
 	<div class="row source">
-		<div class="col-xs-12">时间：<%= @blog.created_at.strftime('%F')%> 来源：<%= @blog.source%></div>
+		<div class="col-xs-12">时间：<span class='time'><%= @blog.created_at.strftime('%F')%></span> 来源：<%= @blog.source%></div>
 	</div>
 	<div class="row content">
 		<div class="col-xs-12">
