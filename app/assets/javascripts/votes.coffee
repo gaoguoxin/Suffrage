@@ -58,6 +58,7 @@ $(->
 				comp = $.trim($('input[name="company"]').val())
 				posi = $.trim($('input[name="position"]').val())
 				mobi = $.trim($('input[name="mobile"]').val())
+				emai = $.trim($('input[name="email"]').val())
 				cont = $.trim($('textarea').val())
 				go   = true 
 				$.each([name,prov,city,area,comp,posi,mobi,cont],()->
@@ -65,7 +66,7 @@ $(->
 						go = false
 				)
 				if go
-					if $.regex.isMobile(mobi)
+					if $.regex.isMobile(mobi) && $.regex.isEmail(emai)
 						$.post('/votes',{
 								name:name,
 								province:prov,
@@ -74,6 +75,7 @@ $(->
 								company:comp,
 								position:posi,
 								mobile:mobi,
+								email:emai,
 								content:cont
 							},(ret)->
 								if ret.success
