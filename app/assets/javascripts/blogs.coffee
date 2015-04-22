@@ -2,7 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(->
-  $('#blog_image').fileinput({'showUpload':false})
   $('ul.blog-type li a').click(->
   	type = $(this).data('role')
   	txt  = $(this).text()
