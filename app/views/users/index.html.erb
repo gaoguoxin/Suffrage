@@ -24,7 +24,7 @@
               <% @users.each do |user|%>
                 <tr>
                   <td><%= user.name %></td>
-                  <td><%= user.city %></td>
+                  <td><%= user.province%>-<%= user.city %>-<%= user.area %></td>
                   <td><%= user.company %></td>
                   <td><%= user.position %></td>
                   <td><%= user.mobile %></td>

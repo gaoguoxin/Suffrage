@@ -15,7 +15,7 @@
 					<div class="col-xs-4"><%= image_tag(blog.image_url,:class => 'img-responsive')%></div>
 					<div class="col-xs-8">
 						<p class='name'><%= truncate(blog.name,:length => 12)%></p>
-						<p class='time'>时间：<%= blog.created_at.strftime('%F')%></p>
+						<p class='time'>时间：<span><%= blog.created_at.strftime('%F')%></span></p>
 						<p class="source">来源：<%= blog.source%></p>
 					</div>				
 				</a>		

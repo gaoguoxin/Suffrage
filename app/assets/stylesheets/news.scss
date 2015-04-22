@@ -64,6 +64,9 @@ html, body {
               &.time,&.source{
                 color:#8b8b8b;
               }
+              &.time span{
+                font-family: arial;
+              }
             }
             @media screen and (max-width: 414px) {
               p{

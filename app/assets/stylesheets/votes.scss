@@ -12,34 +12,6 @@ html, body {
       }
       padding-top:10px;
       padding-bottom:15px;
-      // .title{
-      //   background:-webkit-linear-gradient(bottom,#f4f4f4,#ffffff);
-      //   .subtitle{
-      //     float:left;
-      //     height:32px;
-      //     line-height:32px;    
-      //     font-weight:bold;      
-      //   }
-      //   font-size:16px;
-      //   border-top-left-radius:6px;
-      //   border-top-right-radius:6px;
-      //   padding-top:15px;
-      //   padding-bottom:10px;
-      //   .avatar{
-      //     display:inline-block;
-      //     float:left;
-      //     margin-right:12px;
-      //     border-radius: 50%;
-      //     background:#f96556;
-      //     width:32px;
-      //     height:32px;
-      //     i{
-      //       left:8px;
-      //       top:6px;
-      //       color:#fff;
-      //     }
-      //   }
-      // }
       form{
         .btn-group{
           width:100%;
@@ -51,6 +23,9 @@ html, body {
             position:absolute;
             right:15px;
             top:18px;
+          }
+          .dropdown-toggle{
+            text-align:left;
           }
           ul.dropdown-menu{
             width:100%;
@@ -79,7 +54,6 @@ html, body {
       .list-content{
         >.row{
           padding-top:20px;
-          border:1px solid #d1d2d2;
           &.title{
             color:#109ba0;
             font-size:18px;
@@ -105,6 +79,9 @@ html, body {
           
           background:#fff;
           .col-xs-3{
+            img{
+              border-bottom:1px solid #d1d2d2;
+            }
             &:first-child{
               padding-left:4px;
               padding-right:0px;  
@@ -118,8 +95,16 @@ html, body {
               span.count{
                 position:absolute;
                 color:#fff;
-                font-size:18px;
-                top:18px;
+                font-size:20px;
+                font-family: arial;
+                
+                @media screen and (max-width: 320px) {
+                  top:22%;
+                }
+                @media screen and (min-width: 375px) {
+                  top:25%;
+                }                
+
                 bottom:0px;
                 display:block;
                 width:calc(100% - 4px);
@@ -150,11 +135,13 @@ html, body {
             padding-left:4px;
             background:#f3f5f5;
             color:#555555;
+            border-bottom:1px solid #d1d2d2;
             span{
               display:block;
               &.name{
                 color:#000000;
                 font-size:16px;
+                font-weight:bolder;
               }
             }
             @media screen and (min-width: 375px) {
@@ -164,6 +151,7 @@ html, body {
             }
             @media screen and (min-width: 414px) {
               span{
+                margin-top:2px;
                 margin-bottom:6px;
               }
             }
@@ -171,7 +159,8 @@ html, body {
           @media screen and (max-width: 375px) {
             .col-xs-6{
               span.name{
-                margin-bottom:2px;
+                margin-top:2px;
+                margin-bottom:0px;
               }
             }
           }           
