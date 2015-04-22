@@ -2,10 +2,11 @@ $(->
 	if window.location.href.indexOf('votes') > 0 
 		fingerprint = new Fingerprint().get()
 		#初始化省份下拉菜单
-		$.each(window.provinces,(k,v)->
-			li = $("<li><a href='javascript:void(0);' data-num='#{k}' data-value='#{v.name}'>#{v.name}</a></li>")
-			li.appendTo('.province')
-		)
+		if window.provinces
+			$.each(window.provinces,(k,v)->
+				li = $("<li><a href='javascript:void(0);' data-num='#{k}' data-value='#{v.name}'>#{v.name}</a></li>")
+				li.appendTo('.province')
+			)
 	
 		#省份变动导致的城市变动
 		$('body.mobile .users form ul.province li a').click(->
