@@ -75,6 +75,32 @@ html, body {
 					padding-bottom:20px;
 					line-height: 1.8em;
     				overflow: scroll;
+    				p.require{
+    					color:#c10909;
+    					font-size:22px;
+    					border-top:1px dashed #aaaaaa;
+    					border-bottom:1px dashed #aaaaaa;
+    					margin:10px 0px;
+    					padding:10px 0px;
+    				}
+    				.level1{
+    					.tit{
+    						color:#0b7baf;
+    						font-size:20px;
+    						i{
+    							margin-right:6px;
+    						}
+    					}
+    					.sub-tit{
+    						color:#e56202;
+    						font-weight: bold;
+    					}
+    					p{
+    						span{
+    							display:block;
+    						}
+    					}
+    				}
     				@include content_auto_height(500px,450px,320px);
 				}
     		}
